@@ -6,7 +6,7 @@ public class MyMain {
     // If the char is not an uppercase letter, 
     // it is returned unchanged. 
     public static char toLower(char ch) {
-        while (!(Character.isLowerCase(ch))) {
+        if (!(Character.isLowerCase(ch))) {
             ch = Character.toUpperCase(ch);
         }
         return ch;
@@ -33,7 +33,7 @@ public class MyMain {
     // If the char is not an lowercase letter, 
     // it is returned unchanged. 
     public static char toUpper(char ch) {
-        while (!(Character.isUpperCase(ch))) {
+        if (!(Character.isUpperCase(ch))) {
             ch = Character.toLowerCase(ch);
         }
         return ch;
