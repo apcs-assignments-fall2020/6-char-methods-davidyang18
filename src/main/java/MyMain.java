@@ -6,20 +6,22 @@ public class MyMain {
     // If the char is not an uppercase letter, 
     // it is returned unchanged. 
     public static char toLower(char ch) {
-        if (!(Character.isLowerCase(ch))) {
-            ch = Character.toUpperCase(ch);
+        if ((ch >= 'A') && (ch <= 'Z')) {
+            return (char) (ch+32);
         }
-        return ch;
+        else {
+            return ch;
+        }
     }
 
     // Returns a copy of a String, where all letters 
     // are now lowercase
     public static String myToLowerCase(String str) {
         char lower = ' ';
-        String output = " ";
+        String output = "";
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) > 'a' && str.charAt(i) < 'z') {
-                lower = (char) (str.charAt(i) - 32);
+            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+                lower = (char) (str.charAt(i) + 32);
             }
             else {
                 lower = (char) (str.charAt(i));
@@ -33,20 +35,22 @@ public class MyMain {
     // If the char is not an lowercase letter, 
     // it is returned unchanged. 
     public static char toUpper(char ch) {
-        if (!(Character.isUpperCase(ch))) {
-            ch = Character.toLowerCase(ch);
+        if ((ch >= 'a') && (ch <= 'z')) {
+            return (char) (ch-32);
         }
-        return ch;
+        else {
+            return ch;
+        }
     }
 
     // Returns a copy of a String, where all letters 
     // are now uppercase
     public static String myToUpperCase(String str) {
         char upper = ' ';
-        String out_put = " ";
-        for (int i = 0; i < str.charAt(i); i++) {
-            if (str.charAt(i) > 'a' && str.charAt(i) < 'z') {
-                upper = (char) (str.charAt(i) + 32);
+        String out_put = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
+                upper = (char) (str.charAt(i) - 32);
             }
             else {
                 upper = (char) (str.charAt(i));
